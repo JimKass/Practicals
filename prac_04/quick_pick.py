@@ -6,7 +6,7 @@ def main():
     for i in range(1, number_of_quick_picks + 1):
         quick_pick = []
         while len(quick_pick) < 6:
-            number = random.randint(1, 46)
+            number = random.randint(1, 45)
             if number not in quick_pick:
                 quick_pick.append(number)
         quick_picks.append(quick_pick)
