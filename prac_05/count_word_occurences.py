@@ -16,3 +16,4 @@ def main():
         print("{:{}} : {}".format(word, max_length, words[word]))
 
 main()
+
