@@ -1,0 +1,30 @@
+<Button>:
+    background_color: (1, 1, 1, 1)
+    color: (0, 0, 0, 1)
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: input_field
+            on_text: app.convert_m_to_km()
+            text: "0"
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                text: 'Up'
+                on_press: app.handle_increment(1)
+            Button:
+                text: 'Down'
+                on_press: app.handle_increment(-1)
+    Label:
+        id: output_label
+        text: ''
+        color: (1, 1, 0, 1)
