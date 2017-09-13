@@ -9,6 +9,7 @@ def main():
             words[word] = 1
     sorted_words = sorted(words.keys())
     max_length = 0
+    # TODO: Try with list comprehension
     for word in sorted_words:
         if len(word) > max_length:
             max_length = len(word)

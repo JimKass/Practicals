@@ -3,8 +3,8 @@ STATE_NAMES = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Nothern Ter
 
 
 def main():
-    for state_name in STATE_NAMES.items():
-        print(" {:4} is {}".format(state_name[0], state_name[1]))
+    for state_short, state_long in STATE_NAMES.items():
+        print(" {:4} is {}".format(state_short, state_long))
 
 
 main()
