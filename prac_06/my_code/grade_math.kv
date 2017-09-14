@@ -1,0 +1,18 @@
+BoxLayout:
+    orientation: 'horizontal'
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: 'Calculate'
+            on_release: app.calculate_grade()
+        Button:
+            text: 'Clear'
+            on_release: app.clear_fields()
+    BoxLayout:
+        orientation: 'vertical'
+        TextInput:
+            text: '0'
+            id: input_field
+        Label:
+            text: ''
+            id: output_label

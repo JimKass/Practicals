@@ -1,0 +1,15 @@
+BoxLayout:
+    orientation: 'horizontal'
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: 'Create List'
+            on_release: app.create_widgets()
+        Button:
+            text: 'Clear List'
+        Label:
+            text: ''
+            id: output_label
+    BoxLayout:
+        orientation: 'vertical'
+        id: widget_field

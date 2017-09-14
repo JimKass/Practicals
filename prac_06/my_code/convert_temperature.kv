@@ -1,0 +1,18 @@
+BoxLayout:
+    orientation: 'horizontal'
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: 'to Celsius'
+            on_release: app.convert_fahrenheit_to_celsius()
+        Button:
+            text: 'to Fahrenheit'
+            on_release: app.convert_celsius_to_fahrenheit()
+    BoxLayout:
+        orientation: 'vertical'
+        TextInput:
+            text: ''
+            id: input_field
+        Label
+            text: ''
+            id: output_label
