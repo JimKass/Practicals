@@ -8,12 +8,31 @@ from prac_07.guitar import Guitar
 
 MY_GUITAR = ["Peavey AT-200", 2014, 600]
 DADS_GUITAR = ["Tanglewood", 1982, 800]
+MENU = """A - Add a guitar
+D - Display a guitar"""
 
 
 def main():
     print("My guitars!")
     guitars = []
-    guitars = add_guitar(guitars)
+    print(MENU)
+    action = get_valid_string(">>> ")
+    while action != "q":
+        if action == "a":
+            guitars = add_guitar(guitars)
+        elif action == "d":
+            display_guitars(guitars)
+        else:
+            print("Invalid Input")
+        print(MENU)
+        action = get_valid_string(">>> ")
+    print("Good-bye.")
+
+
+def display_guitars(guitars):
+    for i, guitar in enumerate(guitars):
+        vintage_string = ["{vintage)" if guitar.is_vintage() else ""]
+        print("Guitar {}: {} ({}), worth ${} {}".format(i + 1, guitar.name, guitar.year, guitar.cost, vintage_string))
 
 
 def add_guitar(guitars):
@@ -32,7 +51,7 @@ def get_valid_string(prompt):
         while user_input == "":
             print("Input cannot be blank")
             user_input = input(prompt)
-        return user_input
+        return user_input.lower()
 
 
 def get_valid_integer(prompt):
