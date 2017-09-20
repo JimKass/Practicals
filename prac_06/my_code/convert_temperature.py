@@ -4,6 +4,8 @@
 
 from kivy.app import App
 from kivy.lang import Builder
+from prac_03.temperatures_v2 import fahrenheit_to_celsius
+from prac_03.temperatures_v2 import celsius_to_fahrenheit
 
 class ConvertTemperature(App):
     def build(self):
