@@ -6,8 +6,6 @@ Let's you collect all of the guitars in the WWWOOORRRLLLDDD!!!
 from prac_07.guitar import Guitar
 
 
-MY_GUITAR = ["Peavey AT-200", 2014, 600]
-DADS_GUITAR = ["Tanglewood", 1982, 800]
 MENU = """A - Add a guitar
 D - Display a guitar"""
 
@@ -16,7 +14,7 @@ def main():
     print("My guitars!")
     guitars = []
     print(MENU)
-    action = get_valid_string(">>> ")
+    action = get_valid_string(">>> ").lower()
     while action != "q":
         if action == "a":
             guitars = add_guitar(guitars)
@@ -25,7 +23,7 @@ def main():
         else:
             print("Invalid Input")
         print(MENU)
-        action = get_valid_string(">>> ")
+        action = get_valid_string(">>> ").lower()
     print("Good-bye.")
 
 
@@ -44,14 +42,13 @@ def add_guitar(guitars):
     print("{} ({}) : ${} added".format(guitar.name, guitar.year, guitar.cost))
     return guitars
 
-    # print("Guitar {}: {:>20} ({}), worth ${:10.2f}".format(guitar.name, guitar.year, guitar.cost))
 
 def get_valid_string(prompt):
         user_input = input(prompt)
         while user_input == "":
             print("Input cannot be blank")
             user_input = input(prompt)
-        return user_input.lower()
+        return user_input
 
 
 def get_valid_integer(prompt):
