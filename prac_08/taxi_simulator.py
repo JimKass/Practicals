@@ -30,8 +30,7 @@ def main():
             pass
         print(MENU)
         action = input(">>> ").lower()
-
-    print("Total trip cost: ${}".format(calculate_total_cost(TAXIS))
+    print("Total trip cost: ${}".format(calculate_total_cost(TAXIS)))
     print("Taxis are now:")
     display_taxis(TAXIS)
 
