@@ -23,7 +23,6 @@ def main():
             drive_taxi(my_taxi)
         else:
             print("Invalid Input. Please enter a valid input")
-
         try:
             print("Bill to date: ${}".format(my_taxi.get_fare()))
         except UnboundLocalError:
@@ -61,6 +60,7 @@ def choose_taxi():
 def display_taxis(taxis):
     for i, taxi in enumerate(taxis):
         print("{} - {}".format(i, taxi))
+
 
 def calculate_total_cost(taxis):
     cost = 0

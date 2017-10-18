@@ -5,7 +5,7 @@ delorean = UnreliableCar("DeLorean", 100, 50)
 print(delorean)
 
 print("Testing Initialization...")
-delorean.drive(10)
+print(delorean.drive(10))
 print(delorean)
 delorean.drive(10)
 print(delorean)

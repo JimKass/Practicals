@@ -16,6 +16,6 @@ class UnreliableCar(Car):
     def drive(self, distance):
         is_working = self.reliability > randint(0, 101)
         if is_working:
-            super().drive(distance)
+            return super().drive(distance)
         else:
             return 0
